@@ -1,4 +1,4 @@
-﻿namespace Phial.Log
+﻿namespace Phial
 {
     public static class LogHandlerRegister
     {

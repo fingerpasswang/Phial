@@ -86,7 +86,7 @@ namespace RPCBase
                 //    return;
                 //}
 
-                callback(buff.GetBuffer(), null, null);
+                callback(buff.GetBuffer(), srcUuid, routingRule);
                 //sender.Send(, serviceMetaInfo.GetReturnRoutingKey(new Guid(method.SessionId).ToString()),
                 //    serviceMetaInfo.GetReturnExchangeName());
             });

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using MqttLib;
-using Phial.Log;
+using Phial;
 
 namespace RPCBase.Client
 {

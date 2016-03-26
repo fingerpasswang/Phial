@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using Network;
-using Phial.Log;
+using Phial;
 
 namespace RPCBase.Server
 {
@@ -173,6 +173,7 @@ namespace RPCBase.Server
 
                 if (toQuery.TryGetValue(serviceId, out msgConsumer))
                 {
+                    // todo eliminate magic number
                     msgConsumer.OnReceiveMessage(rpcMode, msg.Buffer, 1 + 4 + 1, null);
                 }
             }

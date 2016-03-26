@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-using Phial.Log;
 using StackExchange.Redis;
+using Phial;
 
 // helper classes for code generation
 namespace DataAccess

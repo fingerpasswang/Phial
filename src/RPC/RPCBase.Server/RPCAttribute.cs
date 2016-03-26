@@ -2,19 +2,29 @@
 
 namespace RPCBase
 {
+    public enum ServiceScope
+    {
+        InterServer,
+        ClientToServer,
+        ServerToClient,
+    }
+
     // publish notify service
     public class NotifyAttribute : ServiceAttribute
     {
-       
+        public NotifyAttribute() : base(ServiceScope.InterServer)
+        {
+            
+        }
     }
 
     // point-to-point RPC
     public class ServiceAttribute : Attribute
     {
-        public bool Divisional { get; private set; }
-        public ServiceAttribute( bool divisional = true)
+        public ServiceScope ServiceScope { get; private set; }
+        public ServiceAttribute(ServiceScope scope)
         {
-            Divisional = divisional;
+            ServiceScope = scope;
         }
     }
 
@@ -22,9 +32,18 @@ namespace RPCBase
     public class SyncAttribute : ServiceAttribute
     {
         public bool Multicast { get; private set; }
-        public SyncAttribute(bool multicast = false)
+        public SyncAttribute(bool multicast = false): base(ServiceScope.ServerToClient)
         {
             Multicast = multicast;
+        }
+    }
+
+    public class DivisionalAttribute : Attribute
+    {
+        public bool Divisional { get; private set; }
+        public DivisionalAttribute(bool divisional)
+        {
+            Divisional = true;
         }
     }
 }

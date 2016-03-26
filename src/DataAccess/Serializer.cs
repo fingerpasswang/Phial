@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Threading;
 using AltSerialize;
-using Phial.Log;
+using Phial;
 
 // helper classes for AltSerialize
 namespace DataAccess

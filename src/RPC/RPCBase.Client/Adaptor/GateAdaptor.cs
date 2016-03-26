@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using Network;
-using Phial.Log;
+using Phial;
 
 namespace RPCBase.Client
 {

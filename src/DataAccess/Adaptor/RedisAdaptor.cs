@@ -5,8 +5,8 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Threading.Tasks;
-using Phial.Log;
 using StackExchange.Redis;
+using Phial;
 
 namespace DataAccess
 {
